@@ -5,14 +5,14 @@ import com.github.persian.usecases.hashtables.BankCodeMapping;
 
 public class Bank {
 
-    private final BankCodeMapping banksDetails;
+    private final BankCodeMapping bankCodeMapping;
 
     public Bank() {
-        this.banksDetails = new BankCodeMapping();
+        this.bankCodeMapping = new BankCodeMapping();
     }
 
     public String getBankNameFromCardNumber(Integer cardNumber) throws BankNotFoundByProvidedDigits {
-        String bankName = this.banksDetails.getBankDetails().get(cardNumber);
+        String bankName = this.bankCodeMapping.getBankDetails().get(cardNumber);
 
         if (bankName.isBlank()){
             throw new BankNotFoundByProvidedDigits(cardNumber);

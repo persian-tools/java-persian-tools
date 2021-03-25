@@ -1,4 +1,4 @@
-package com.github.persianTools;
+package com.github.persian;
 
 import static org.junit.Assert.assertTrue;
 

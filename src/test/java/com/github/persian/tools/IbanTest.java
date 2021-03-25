@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class IbanTest {
 
     @Test
-    public void shouldValidateCorrectIban(){
+    public void shouldValidateIBANsCorrectly(){
         Iban ibanValidator = new Iban();
 
         for(Map.Entry<String, Boolean> entry : getIbans().entrySet()) {

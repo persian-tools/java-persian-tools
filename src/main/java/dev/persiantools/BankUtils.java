@@ -22,7 +22,7 @@ public class BankUtils {
   public Bank findByCardNumber(Integer cardNumber) throws BankNotFoundByProvidedCardNumber {
     Bank searchResult = cardIdentifiers.get(cardNumber);
 
-    if (searchResult.getIbanCode().isBlank()) {
+    if (searchResult == null) {
       throw new BankNotFoundByProvidedCardNumber(cardNumber);
     }
 

@@ -4,7 +4,6 @@ import dev.persiantools.commons.Bank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
-import java.util.function.Predicate;
 
 public class BanksCollection {
 
@@ -622,7 +621,7 @@ public class BanksCollection {
       .setNickname("mehr-iran")
       .setName("Mehr Iran Bank")
       .setPersianName("بانک مهر ایران")
-      .setIbanCode("060")
+      .setIbanCode("090")
       .setAccountNumberAvailable(false)
       .setCardNumberIdentifiers(cardNumberIdentifiers);
 

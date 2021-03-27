@@ -22,7 +22,7 @@ public class Bank {
         return persianName;
     }
 
-    public List<Integer> getcardNumberIdentifiers() {
+    public List<Integer> getCardNumberIdentifiers() {
         return cardNumberIdentifiers;
     }
 
@@ -63,5 +63,4 @@ public class Bank {
         this.accountNumberAvailable = accountNumberAvailable;
         return this;
     }
-
 }

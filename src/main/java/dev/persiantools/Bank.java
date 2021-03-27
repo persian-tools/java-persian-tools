@@ -1,7 +1,7 @@
-package com.github.persian.tools;
+package dev.persiantools;
 
-import com.github.persian.usecases.exceptions.BankNotFoundByProvidedDigits;
-import com.github.persian.usecases.hashtables.BankCodeMapping;
+import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedDigits;
+import dev.persiantools.usecases.hashtables.BankCodeMapping;
 
 public class Bank {
 

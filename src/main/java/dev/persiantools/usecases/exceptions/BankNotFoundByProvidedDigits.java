@@ -1,4 +1,4 @@
-package com.github.persian.usecases.exceptions;
+package dev.persiantools.usecases.exceptions;
 
 public class BankNotFoundByProvidedDigits extends Exception{
     public BankNotFoundByProvidedDigits(Integer digitsToFindBank){

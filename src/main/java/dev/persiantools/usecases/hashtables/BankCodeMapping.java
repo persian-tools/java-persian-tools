@@ -1,4 +1,4 @@
-package com.github.persian.usecases.hashtables;
+package dev.persiantools.usecases.hashtables;
 
 import java.util.HashMap;
 

@@ -1,11 +1,13 @@
 package dev.persiantools.commons;
 
+import java.util.List;
+
 public class Bank {
     private String nickname;
     private String name;
     private String persianName;
     private String ibanCode;
-    private Integer cardNumberDigit;
+    private List<Integer> cardNumberIdentifiers;
     private boolean accountNumberAvailable;
 
     public String getNickname() {
@@ -20,8 +22,8 @@ public class Bank {
         return persianName;
     }
 
-    public Integer getCardNumberDigit() {
-        return cardNumberDigit;
+    public List<Integer> getcardNumberIdentifiers() {
+        return cardNumberIdentifiers;
     }
 
     public String getIbanCode() {
@@ -47,8 +49,8 @@ public class Bank {
         return this;
     }
 
-    public Bank setCardNumberDigitIdentifier(Integer cardNumberDigit) {
-        this.cardNumberDigit = cardNumberDigit;
+    public Bank setCardNumberIdentifiers(List<Integer> cardNumberIdentifiers) {
+        this.cardNumberIdentifiers = cardNumberIdentifiers;
         return this;
     }
 

@@ -1,7 +1,5 @@
 package com.github.persian.tools;
 
-import com.github.persian.usecases.exceptions.BankNotFoundByProvidedDigits;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;

@@ -2,7 +2,7 @@ package dev.persiantools;
 
 import java.math.BigInteger;
 
-public class Iban {
+public class IbanUtils {
 
     public boolean isValid(String iban){
         String  numericCountryCode = "1827";
@@ -23,4 +23,9 @@ public class Iban {
             .intValue() == 1;
     }
 
+    public BankUtils bankDetails(){
+
+
+        return new BankUtils();
+    }
 }

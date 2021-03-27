@@ -11,7 +11,7 @@ public class IbanTest {
 
     @Test
     public void shouldValidateIBANsCorrectly(){
-        Iban ibanValidator = new Iban();
+        IbanUtils ibanValidator = new IbanUtils();
 
         for(Map.Entry<String, Boolean> entry : getIbans().entrySet()) {
             String iban = entry.getKey();

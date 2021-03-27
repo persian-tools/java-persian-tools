@@ -1,6 +1,6 @@
 package dev.persiantools;
 
-import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedDigits;
+import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedCardNumber;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -15,7 +15,7 @@ public class BankTest
     @Test
     public void shouldReturnsBanksNameUsingTheirCodes()
     {
-        Bank bank = new Bank();
+        BankUtils bank = new BankUtils();
 
         try {
             for(Map.Entry<Integer, String> entry : getBanksDetails().entrySet()) {
@@ -24,7 +24,7 @@ public class BankTest
 
                 assertEquals(bank.getBankNameFromCardNumber(code), name);
             }
-        } catch (BankNotFoundByProvidedDigits bankNotFoundByProvidedDigits) {
+        } catch (BankNotFoundByProvidedCardNumber bankNotFoundByProvidedDigits) {
             bankNotFoundByProvidedDigits.printStackTrace();
         }
     }

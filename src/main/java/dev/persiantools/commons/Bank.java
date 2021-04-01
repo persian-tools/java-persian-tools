@@ -3,64 +3,45 @@ package dev.persiantools.commons;
 import java.util.List;
 
 public class Bank {
-    private String nickname;
-    private String name;
-    private String persianName;
-    private String ibanCode;
-    private List<Integer> cardNumberIdentifiers;
-    private boolean accountNumberAvailable;
 
-    public String getNickname() {
-        return nickname;
-    }
+  private final String nickname;
+  private final String name;
+  private final String persianName;
+  private final String ibanCode;
+  private final List<Integer> cardNumberIdentifiers;
+  private final boolean accountNumberAvailable;
 
-    public String getName() {
-        return name;
-    }
+  public Bank(String nickname, String name, String persianName, String ibanCode, List<Integer> cardNumberIdentifiers, boolean accountNumberAvailable) {
+      this.nickname = nickname;
+      this.name = name;
+      this.persianName = persianName;
+      this.ibanCode = ibanCode;
+      this.cardNumberIdentifiers = cardNumberIdentifiers;
+      this.accountNumberAvailable = accountNumberAvailable;
+  }
 
-    public String getPersianName() {
-        return persianName;
-    }
+  public String getNickname() {
+    return nickname;
+  }
 
-    public List<Integer> getCardNumberIdentifiers() {
-        return cardNumberIdentifiers;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getIbanCode() {
-        return ibanCode;
-    }
+  public String getPersianName() {
+    return persianName;
+  }
 
-    public boolean getAccountNumberAvailable() {
-        return accountNumberAvailable;
-    }
+  public List<Integer> getCardNumberIdentifiers() {
+    return cardNumberIdentifiers;
+  }
 
-    public Bank setNickname(String nickname) {
-        this.nickname = nickname;
-        return this;
-    }
+  public String getIbanCode() {
+    return ibanCode;
+  }
 
-    public Bank setName(String name) {
-        this.name = name;
-        return this;
-    }
+  public boolean getAccountNumberAvailable() {
+    return accountNumberAvailable;
+  }
 
-    public Bank setPersianName(String persianName) {
-        this.persianName = persianName;
-        return this;
-    }
-
-    public Bank setCardNumberIdentifiers(List<Integer> cardNumberIdentifiers) {
-        this.cardNumberIdentifiers = cardNumberIdentifiers;
-        return this;
-    }
-
-    public Bank setIbanCode(String ibanCode) {
-        this.ibanCode = ibanCode;
-        return this;
-    }
-
-    public Bank setAccountNumberAvailable(boolean accountNumberAvailable) {
-        this.accountNumberAvailable = accountNumberAvailable;
-        return this;
-    }
 }

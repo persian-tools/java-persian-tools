@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class BanksCollection {
 
   private final List<Bank> bankCollections = new ArrayList<>();
-  private final TreeMap<Integer, Bank> cardNumberMapping = new TreeMap();
+  private final TreeMap<Integer, Bank> cardNumberMapping = new TreeMap<>();
 
   public BanksCollection() {
     addCentralBank();
@@ -63,13 +63,13 @@ public class BanksCollection {
 
     cardNumberIdentifiers.add(636797);
 
-    Bank bankObj = new Bank()
-      .setNickname("central-bank")
-      .setName("Central Bank of Iran")
-      .setPersianName("بانک مرکزی جمهوری اسلامی ایران")
-      .setCardNumberIdentifiers(cardNumberIdentifiers)
-      .setIbanCode("010")
-      .setAccountNumberAvailable(false);
+    String nickname = "central-bank";
+    String name = "Central Bank of Iran";
+    String persianName  = "بانک مرکزی جمهوری اسلامی ایران";
+    String ibanCode = "010";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -80,13 +80,13 @@ public class BanksCollection {
 
     cardNumberIdentifiers.add(627961);
 
-    Bank bankObj = new Bank()
-      .setNickname("sanat-o-madan")
-      .setName("Sanat O Madan Bank")
-      .setPersianName("بانک صنعت و معدن")
-      .setIbanCode("011")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "sanat-o-madan";
+    String name = "Sanat O Madan Bank";
+    String persianName  = "بانک صنعت و معدن";
+    String ibanCode = "011";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -98,13 +98,13 @@ public class BanksCollection {
     cardNumberIdentifiers.add(610433);
     cardNumberIdentifiers.add(991975);
 
-    Bank bankObj = new Bank()
-      .setNickname("mellat")
-      .setName("Mellat Bank")
-      .setPersianName("بانک ملت")
-      .setIbanCode("012")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "mellat";
+    String name = "Mellat Bank";
+    String persianName  = "بانک ملت";
+    String ibanCode = "012";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -114,13 +114,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(589463);
 
-    Bank bankObj = new Bank()
-      .setNickname("refah")
-      .setName("Refah Bank")
-      .setPersianName("بانک رفاه کارگران")
-      .setIbanCode("013")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "refah";
+    String name = "Refah Bank";
+    String persianName  = "بانک رفاه کارگران";
+    String ibanCode = "013";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -130,13 +130,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(628023);
 
-    Bank bankObj = new Bank()
-      .setNickname("maskan")
-      .setName("Maskan Bank")
-      .setPersianName("بانک مسکن")
-      .setIbanCode("014")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "maskan";
+    String name = "Maskan Bank";
+    String persianName  = "بانک مسکن";
+    String ibanCode = "014";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -146,13 +146,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(589210);
 
-    Bank bankObj = new Bank()
-      .setNickname("sepah")
-      .setName("Sepah Bank")
-      .setPersianName("بانک سپه")
-      .setIbanCode("015")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "sepah";
+    String name = "Sepah Bank";
+    String persianName  = "بانک سپه";
+    String ibanCode = "015";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -164,13 +164,13 @@ public class BanksCollection {
     cardNumberIdentifiers.add(603770);
     cardNumberIdentifiers.add(639217);
 
-    Bank bankObj = new Bank()
-      .setNickname("keshavarzi")
-      .setName("Keshavarzi")
-      .setPersianName("بانک کشاورزی")
-      .setIbanCode("016")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "keshavarzi";
+    String name = "Keshavarzi";
+    String persianName  = "بانک کشاورزی";
+    String ibanCode = "016";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -182,13 +182,13 @@ public class BanksCollection {
     cardNumberIdentifiers.add(170019);
     cardNumberIdentifiers.add(603799);
 
-    Bank bankObj = new Bank()
-      .setNickname("melli")
-      .setName("Melli")
-      .setPersianName("بانک ملی ایران")
-      .setIbanCode("017")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "melli";
+    String name = "Melli";
+    String persianName  = "بانک ملی ایران";
+    String ibanCode = "017";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -199,13 +199,14 @@ public class BanksCollection {
 
     cardNumberIdentifiers.add(585983);
     cardNumberIdentifiers.add(627353);
-    Bank bankObj = new Bank()
-      .setNickname("tejarat")
-      .setName("Tejarat Bank")
-      .setPersianName("بانک تجارت")
-      .setIbanCode("018")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "tejarat";
+        String name = "Tejarat Bank";
+        String persianName  = "بانک تجارت";
+        String ibanCode = "018";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -216,13 +217,13 @@ public class BanksCollection {
 
     cardNumberIdentifiers.add(207177);
     cardNumberIdentifiers.add(627648);
-    Bank bankObj = new Bank()
-      .setNickname("saderat")
-      .setName("Saderat Bank")
-      .setPersianName("بانک صادرات ایران")
-      .setIbanCode("019")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+        String nickname = "saderat";
+        String name = "Saderat Bank";
+        String persianName  = "بانک صادرات ایران";
+        String ibanCode = "019";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -234,13 +235,13 @@ public class BanksCollection {
     cardNumberIdentifiers.add(207177);
     cardNumberIdentifiers.add(627648);
 
-    Bank bankObj = new Bank()
-      .setNickname("tosee-saderat")
-      .setName("Tose Saderat Bank")
-      .setPersianName("بانک توسعه صادرات")
-      .setIbanCode("020")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "tosee-saderat";
+    String name = "Tose Saderat Bank";
+    String persianName  = "بانک توسعه صادرات";
+    String ibanCode = "020";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -250,13 +251,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(627760);
 
-    Bank bankObj = new Bank()
-      .setNickname("post")
-      .setName("Post Bank")
-      .setPersianName("پست بانک ایران")
-      .setIbanCode("021")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "post";
+    String name = "Post Bank";
+    String persianName  = "پست بانک ایران";
+    String ibanCode = "021";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -266,13 +267,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(502908);
 
-    Bank bankObj = new Bank()
-      .setNickname("toose-taavon")
-      .setName("Tosee Taavon Bank")
-      .setPersianName("بانک توسعه تعاون")
-      .setIbanCode("022")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "toose-taavon";
+    String name = "Tosee Taavon Bank";
+    String persianName  = "بانک توسعه تعاون";
+    String ibanCode = "022";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -281,27 +282,30 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(628157);
 
-    Bank bankObj = new Bank()
-      .setNickname("tosee")
-      .setName("Tosee Bank")
-      .setPersianName("موسسه اعتباری توسعه")
-      .setIbanCode("051")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "tosee";
+    String name = "Tosee Bank";
+    String persianName  = "موسسه اعتباری توسعه";
+    String ibanCode = "051";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
 
   private void addGhavamin() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
+
     cardNumberIdentifiers.add(639599);
-    Bank bankObj = new Bank()
-      .setNickname("ghavamin")
-      .setName("Ghavamin Bank")
-      .setPersianName("بانک قوامین")
-      .setIbanCode("052")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "ghavamin";
+        String name = "Ghavamin Bank";
+        String persianName  = "بانک قوامین";
+        String ibanCode = "052";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -309,13 +313,14 @@ public class BanksCollection {
   private void addKarafarin() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(627488);
-    Bank bankObj = new Bank()
-      .setNickname("karafarin")
-      .setName("Karafarin Bank")
-      .setPersianName("بانک کارآفرین")
-      .setIbanCode("053")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "karafarin";
+        String name = "Karafarin Bank";
+        String persianName  = "بانک کارآفرین";
+        String ibanCode = "053";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -324,13 +329,14 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(622106);
     cardNumberIdentifiers.add(627884);
-    Bank bankObj = new Bank()
-      .setNickname("parsian")
-      .setName("Parsian Bank")
-      .setPersianName("بانک پارسیان")
-      .setIbanCode("054")
-      .setAccountNumberAvailable(true)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+        String nickname = "parsian";
+        String name = "Parsian Bank";
+        String persianName  = "بانک پارسیان";
+        String ibanCode = "054";
+        boolean accountNumberAvailable = true;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -338,13 +344,14 @@ public class BanksCollection {
   private void addEghtesadNovin() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(627412);
-    Bank bankObj = new Bank()
-      .setNickname("eghtesad-novin")
-      .setName("Eghtesad Novin Bank")
-      .setPersianName("بانک اقتصاد نوین")
-      .setIbanCode("055")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "eghtesad-novin";
+        String name = "Eghtesad Novin Bank";
+        String persianName  = "بانک اقتصاد نوین";
+        String ibanCode = "055";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -352,13 +359,14 @@ public class BanksCollection {
   private void addSaman() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(621986);
-    Bank bankObj = new Bank()
-      .setNickname("saman")
-      .setName("Saman Bank")
-      .setPersianName("بانک سامان")
-      .setIbanCode("056")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "saman";
+        String name = "Saman Bank";
+        String persianName  = "بانک سامان";
+        String ibanCode = "056";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -367,13 +375,14 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(502229);
     cardNumberIdentifiers.add(639347);
-    Bank bankObj = new Bank()
-      .setNickname("pasargad")
-      .setName("Pasargad Bank")
-      .setPersianName("بانک پاسارگاد")
-      .setIbanCode("057")
-      .setAccountNumberAvailable(true)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "pasargad";
+        String name = "Pasargad Bank";
+        String persianName  = "بانک پاسارگاد";
+        String ibanCode = "057";
+        boolean accountNumberAvailable = true;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -382,13 +391,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(639607);
 
-    Bank bankObj = new Bank()
-      .setNickname("sarmayeh")
-      .setName("Sarmayeh Bank")
-      .setPersianName("بانک سرمایه")
-      .setIbanCode("058")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "sarmayeh";
+    String name = "Sarmayeh Bank";
+    String persianName  = "بانک سرمایه";
+    String ibanCode = "058";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -397,13 +406,14 @@ public class BanksCollection {
   private void addSina() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(639346);
-    Bank bankObj = new Bank()
-      .setNickname("sina")
-      .setName("Sina Bank")
-      .setPersianName("بانک سینا")
-      .setIbanCode("059")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "sina";
+        String name = "Sina Bank";
+        String persianName  = "بانک سینا";
+        String ibanCode = "059";
+        boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -412,13 +422,14 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(502806);
     cardNumberIdentifiers.add(504706);
-    Bank bankObj = new Bank()
-      .setNickname("shahr")
-      .setName("City Bank")
-      .setPersianName("بانک شهر")
-      .setIbanCode("061")
-      .setAccountNumberAvailable(true)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+
+        String nickname = "shahr";
+        String name = "City Bank";
+        String persianName  = "بانک شهر";
+        String ibanCode = "061";
+        boolean accountNumberAvailable = true;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -427,13 +438,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(636214);
 
-    Bank bankObj = new Bank()
-      .setNickname("ayandeh")
-      .setName("Ayandeh Bank")
-      .setPersianName("بانک آینده")
-      .setIbanCode("062")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "ayandeh";
+    String name = "Ayandeh Bank";
+    String persianName  = "بانک آینده";
+    String ibanCode = "062";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -442,13 +453,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(627381);
 
-    Bank bankObj = new Bank()
-      .setNickname("ansar")
-      .setName("Ansar Bank")
-      .setPersianName("بانک انصار")
-      .setIbanCode("063")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "ansar";
+    String name = "Ansar Bank";
+    String persianName  = "بانک انصار";
+    String ibanCode = "063";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -459,13 +470,13 @@ public class BanksCollection {
     cardNumberIdentifiers.add(505416);
     cardNumberIdentifiers.add(505426);
 
-    Bank bankObj = new Bank()
-      .setNickname("gardeshgari")
-      .setName("Gardeshgari Bank")
-      .setPersianName("بانک گردشگری")
-      .setIbanCode("064")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "gardeshgari";
+    String name = "Gardeshgari Bank";
+    String persianName  = "بانک گردشگری";
+    String ibanCode = "064";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -475,13 +486,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(636949);
 
-    Bank bankObj = new Bank()
-      .setNickname("hekmat-iranian")
-      .setName("Hekmat Iranian Bank")
-      .setPersianName("بانک حکمت ایرانیان")
-      .setIbanCode("065")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "hekmat-iranian";
+    String name = "Hekmat Iranian Bank";
+    String persianName  = "بانک حکمت ایرانیان";
+    String ibanCode = "065";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -491,13 +502,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(502938);
 
-    Bank bankObj = new Bank()
-      .setNickname("dey")
-      .setName("Dey Bank")
-      .setPersianName("بانک دی")
-      .setIbanCode("066")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "dey";
+    String name = "Dey Bank";
+    String persianName  = "بانک دی";
+    String ibanCode = "066";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -507,13 +518,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(505785);
 
-    Bank bankObj = new Bank()
-      .setNickname("iran-zamin")
-      .setName("Iran Zamin Bank")
-      .setPersianName("بانک ایران زمین")
-      .setIbanCode("069")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "iran-zamin";
+    String name = "Iran Zamin Bank";
+    String persianName  = "بانک ایران زمین";
+    String ibanCode = "069";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -523,13 +534,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(504172);
 
-    Bank bankObj = new Bank()
-      .setNickname("resalat")
-      .setName("Resalat Bank")
-      .setPersianName("بانک قرض الحسنه رسالت")
-      .setIbanCode("070")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "resalat";
+    String name = "Resalat Bank";
+    String persianName  = "بانک قرض الحسنه رسالت";
+    String ibanCode = "070";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -539,13 +550,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(505801);
 
-    Bank bankObj = new Bank()
-      .setNickname("kosar")
-      .setName("Kosar Credit Institute")
-      .setPersianName("موسسه اعتباری کوثر")
-      .setIbanCode("073")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "kosar";
+    String name = "Kosar Credit Institute";
+    String persianName  = "موسسه اعتباری کوثر";
+    String ibanCode = "073";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -555,13 +566,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(606256);
 
-    Bank bankObj = new Bank()
-      .setNickname("melal")
-      .setName("Melal Credit Institute")
-      .setPersianName("موسسه اعتباری ملل")
-      .setIbanCode("075")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "melal";
+    String name = "Melal Credit Institute";
+    String persianName  = "موسسه اعتباری ملل";
+    String ibanCode = "075";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -571,13 +582,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(585949);
 
-    Bank bankObj = new Bank()
-      .setNickname("middle-east-bank")
-      .setName("Middle East Bank")
-      .setPersianName("بانک خاورمیانه")
-      .setIbanCode("078")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "middle-east-bank";
+    String name = "Middle East Bank";
+    String persianName  = "بانک خاورمیانه";
+    String ibanCode = "078";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -587,13 +598,13 @@ public class BanksCollection {
   private void addNoorBank() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
 
-    Bank bankObj = new Bank()
-      .setNickname("noor-bank")
-      .setName("Noor Credit Institution")
-      .setPersianName("موسسه اعتباری نور")
-      .setIbanCode("080")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "noor-bank";
+    String name = "Noor Credit Institution";
+    String persianName  = "موسسه اعتباری نور";
+    String ibanCode = "080";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     bankCollections.add(bankObj);
   }
@@ -602,13 +613,13 @@ public class BanksCollection {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
     cardNumberIdentifiers.add(606373);
 
-    Bank bankObj = new Bank()
-      .setNickname("mehr-eqtesad")
-      .setName("Mehr Eqtesad Bank")
-      .setPersianName("بانک مهر اقتصاد")
-      .setIbanCode("079")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "mehr-eqtesad";
+    String name = "Mehr Eqtesad Bank";
+    String persianName  = "بانک مهر اقتصاد";
+    String ibanCode = "079";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -617,13 +628,13 @@ public class BanksCollection {
   private void addMehrIran() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
 
-    Bank bankObj = new Bank()
-      .setNickname("mehr-iran")
-      .setName("Mehr Iran Bank")
-      .setPersianName("بانک مهر ایران")
-      .setIbanCode("090")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "mehr-iran";
+    String name = "Mehr Iran Bank";
+    String persianName  = "بانک مهر ایران";
+    String ibanCode = "090";
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     bankCollections.add(bankObj);
   }
@@ -631,13 +642,14 @@ public class BanksCollection {
   private void addIranVenezuela() {
     ArrayList<Integer> cardNumberIdentifiers = new ArrayList<>();
 
-    Bank bankObj = new Bank()
-      .setNickname("iran-venezuela")
-      .setName("Iran and Venezuela Bank")
-      .setPersianName("بانک ایران و ونزوئلا")
-      .setIbanCode("095")
-      .setAccountNumberAvailable(false)
-      .setCardNumberIdentifiers(cardNumberIdentifiers);
+    String nickname = "iran-venezuela";
+    String name = "Iran and Venezuela Bank";
+    String persianName  = "بانک ایران و ونزوئلا";
+    String ibanCode = "095";
+
+    boolean accountNumberAvailable = false;
+
+    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
 
     bankCollections.add(bankObj);
   }

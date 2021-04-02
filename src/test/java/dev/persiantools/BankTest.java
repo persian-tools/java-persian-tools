@@ -12,14 +12,12 @@ public class BankTest {
 
   @Test
   public void shouldReturnsBanksNameUsingCardNumbers() {
-    BankUtils bank = new BankUtils();
-
     try {
       for (Map.Entry<String, String> entry : getBanksDetailsByIban().entrySet()) {
         String iban = entry.getKey();
         String name = entry.getValue();
 
-        assertEquals(bank.findByIban(iban).getPersianName(), name);
+        assertEquals(BankUtils.findByIban(iban).getPersianName(), name);
       }
     } catch (BankNotFoundByProvidedIban bankNotFoundByProvidedDigits) {
       bankNotFoundByProvidedDigits.printStackTrace();
@@ -28,14 +26,12 @@ public class BankTest {
 
   @Test
   public void shouldReturnsBanksNameUsingIbans() {
-    BankUtils bank = new BankUtils();
-
     try {
       for (Map.Entry<Integer, String> entry : getBanksDetailsByCardNumber().entrySet()) {
         Integer code = entry.getKey();
         String name = entry.getValue();
 
-        assertEquals(bank.findByCardNumber(code).getPersianName(), name);
+        assertEquals(BankUtils.findByCardNumber(code).getPersianName(), name);
       }
     } catch (BankNotFoundByProvidedCardNumber bankNotFoundByProvidedDigits) {
       bankNotFoundByProvidedDigits.printStackTrace();

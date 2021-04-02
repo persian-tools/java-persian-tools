@@ -10,16 +10,14 @@ import java.util.TreeMap;
 
 public class BankUtils {
 
-  private final List<Bank> banksCollection;
-  private final TreeMap<Integer, Bank> cardIdentifiers;
+    private static final List<Bank> banksCollection = BanksCollection.getInstance().getBanksCollection();
+    private static final TreeMap<Integer, Bank> cardIdentifiers = BanksCollection.getInstance().getCardNumberMapping();
 
-  public BankUtils() {
-    BanksCollection banksData = BanksCollection.getInstance();
-    this.banksCollection = banksData.getBanksCollection();
-    this.cardIdentifiers = banksData.getCardNumberMapping();
+  private BankUtils() {
+
   }
 
-  public Bank findByCardNumber(Integer cardNumber) throws BankNotFoundByProvidedCardNumber {
+  public static Bank findByCardNumber(Integer cardNumber) throws BankNotFoundByProvidedCardNumber {
     Bank searchResult = cardIdentifiers.get(cardNumber);
 
     if (searchResult == null) {
@@ -29,8 +27,8 @@ public class BankUtils {
     return searchResult;
   }
 
-  public Bank findByIban(String ibanIdentifier) throws BankNotFoundByProvidedIban {
-    Optional<Bank> searchResult = banksCollection.stream().filter(bank -> bank.getIbanCode().equals(ibanIdentifier)).findFirst();
+  public static Bank findByIban(String ibanIdentifier) throws BankNotFoundByProvidedIban {
+    Optional<Bank> searchResult = banksCollection.stream().filter(bank -> bank.getIban().equals(ibanIdentifier)).findFirst();
 
     if (searchResult.isPresent()) {
       return searchResult.get();

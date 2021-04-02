@@ -10,13 +10,11 @@ public class IbanTest {
 
   @Test
   public void shouldValidateIBANsCorrectly() {
-    IbanUtils ibanValidator = new IbanUtils();
-
     for (Map.Entry<String, Boolean> entry : getIbans().entrySet()) {
       String iban = entry.getKey();
       Boolean assertion = entry.getValue();
 
-      assertEquals((ibanValidator.isValid(iban)), assertion);
+      assertEquals((IbanUtils.isValid(iban)), assertion);
     }
   }
 

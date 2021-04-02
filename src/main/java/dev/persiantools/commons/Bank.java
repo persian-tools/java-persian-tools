@@ -4,44 +4,91 @@ import java.util.List;
 
 public class Bank {
 
-  private final String nickname;
-  private final String name;
-  private final String persianName;
-  private final String ibanCode;
-  private final List<Integer> cardNumberIdentifiers;
-  private final boolean accountNumberAvailable;
+    private String persianName;
+    private String name;
+    private String nickName;
+    private List<Integer> cardNumberIdentifiers;
+    private boolean accountNumberAvailable;
+    private String iban;
 
-  public Bank(String nickname, String name, String persianName, String ibanCode, List<Integer> cardNumberIdentifiers, boolean accountNumberAvailable) {
-      this.nickname = nickname;
-      this.name = name;
-      this.persianName = persianName;
-      this.ibanCode = ibanCode;
-      this.cardNumberIdentifiers = cardNumberIdentifiers;
-      this.accountNumberAvailable = accountNumberAvailable;
+    private Bank(){}
+
+  public static class Builder{
+      private String nickname;
+      private String name;
+      private String persianName;
+      private String ibanCode;
+      private List<Integer> cardNumberIdentifiers;
+      private boolean accountNumberAvailable;
+
+      public Builder withNickName(String nickname){
+          this.nickname = nickname;
+          return this;
+      }
+
+      public Builder withName(String name){
+          this.name = name;
+          return this;
+      }
+
+      public Builder withPersianName(String persianName){
+          this.persianName = persianName;
+          return this;
+      }
+
+      public Builder withIbanCode(String iban){
+          this.ibanCode = iban;
+          return this;
+      }
+
+      public Builder withCardNumberIdentifiers(List<Integer> identifiers){
+          this.cardNumberIdentifiers = identifiers;
+          return this;
+      }
+
+      public Builder isAccountNumberAvailable(boolean accountNumberAvailable){
+          this.accountNumberAvailable = accountNumberAvailable;
+          return this;
+      }
+
+      public Bank make(){
+          Bank bank = new Bank();
+
+          bank.nickName = this.nickname;
+          bank.name = this.name;
+          bank.iban = this.ibanCode;
+          bank.persianName = this.persianName;
+          bank.cardNumberIdentifiers = this.cardNumberIdentifiers;
+          bank.accountNumberAvailable = this.accountNumberAvailable;
+
+          return bank;
+      }
   }
 
-  public String getNickname() {
-    return nickname;
-  }
+    public String getPersianName() {
+        return persianName;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getPersianName() {
-    return persianName;
-  }
+    public String getNickName() {
+        return nickName;
+    }
 
-  public List<Integer> getCardNumberIdentifiers() {
-    return cardNumberIdentifiers;
-  }
+    public List<Integer> getCardNumberIdentifiers() {
+        return cardNumberIdentifiers;
+    }
 
-  public String getIbanCode() {
-    return ibanCode;
-  }
+    public boolean isAccountNumberAvailable() {
+        return accountNumberAvailable;
+    }
 
-  public boolean getAccountNumberAvailable() {
-    return accountNumberAvailable;
-  }
+    public String getIban() {
+        return iban;
+    }
+
+
 
 }

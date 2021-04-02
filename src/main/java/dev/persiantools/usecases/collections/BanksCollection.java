@@ -87,7 +87,15 @@ public class BanksCollection {
     String ibanCode = "010";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+      Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -104,7 +112,15 @@ public class BanksCollection {
     String ibanCode = "011";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -122,7 +138,15 @@ public class BanksCollection {
     String ibanCode = "012";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -138,7 +162,15 @@ public class BanksCollection {
     String ibanCode = "013";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -154,7 +186,15 @@ public class BanksCollection {
     String ibanCode = "014";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -170,7 +210,15 @@ public class BanksCollection {
     String ibanCode = "015";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -188,7 +236,15 @@ public class BanksCollection {
     String ibanCode = "016";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -206,7 +262,15 @@ public class BanksCollection {
     String ibanCode = "017";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -224,7 +288,15 @@ public class BanksCollection {
         String ibanCode = "018";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -241,7 +313,15 @@ public class BanksCollection {
         String ibanCode = "019";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -259,7 +339,15 @@ public class BanksCollection {
     String ibanCode = "020";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -275,7 +363,15 @@ public class BanksCollection {
     String ibanCode = "021";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -291,7 +387,15 @@ public class BanksCollection {
     String ibanCode = "022";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -306,7 +410,15 @@ public class BanksCollection {
     String ibanCode = "051";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -322,7 +434,15 @@ public class BanksCollection {
         String ibanCode = "052";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -338,7 +458,15 @@ public class BanksCollection {
         String ibanCode = "053";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -353,7 +481,15 @@ public class BanksCollection {
         String ibanCode = "054";
         boolean accountNumberAvailable = true;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -369,7 +505,15 @@ public class BanksCollection {
         String ibanCode = "055";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -384,7 +528,15 @@ public class BanksCollection {
         String ibanCode = "056";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -400,7 +552,15 @@ public class BanksCollection {
         String ibanCode = "057";
         boolean accountNumberAvailable = true;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -415,7 +575,15 @@ public class BanksCollection {
     String ibanCode = "058";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -431,7 +599,15 @@ public class BanksCollection {
         String ibanCode = "059";
         boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -447,7 +623,15 @@ public class BanksCollection {
         String ibanCode = "061";
         boolean accountNumberAvailable = true;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -462,7 +646,15 @@ public class BanksCollection {
     String ibanCode = "062";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
   }
@@ -477,7 +669,15 @@ public class BanksCollection {
     String ibanCode = "063";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -494,7 +694,15 @@ public class BanksCollection {
     String ibanCode = "064";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -510,7 +718,15 @@ public class BanksCollection {
     String ibanCode = "065";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -526,7 +742,15 @@ public class BanksCollection {
     String ibanCode = "066";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -542,7 +766,15 @@ public class BanksCollection {
     String ibanCode = "069";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -558,7 +790,15 @@ public class BanksCollection {
     String ibanCode = "070";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -574,7 +814,15 @@ public class BanksCollection {
     String ibanCode = "073";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -590,7 +838,15 @@ public class BanksCollection {
     String ibanCode = "075";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -606,7 +862,15 @@ public class BanksCollection {
     String ibanCode = "078";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -622,7 +886,15 @@ public class BanksCollection {
     String ibanCode = "080";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     bankCollections.add(bankObj);
   }
@@ -637,7 +909,15 @@ public class BanksCollection {
     String ibanCode = "079";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
     bankCollections.add(bankObj);
@@ -652,7 +932,15 @@ public class BanksCollection {
     String ibanCode = "090";
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     bankCollections.add(bankObj);
   }
@@ -667,7 +955,15 @@ public class BanksCollection {
 
     boolean accountNumberAvailable = false;
 
-    Bank bankObj = new Bank(nickname, name, persianName, ibanCode, cardNumberIdentifiers, accountNumberAvailable);
+     Bank bankObj = new Bank
+          .Builder()
+          .withNickName(nickname)
+          .withName(name)
+          .withPersianName(persianName)
+          .withIbanCode(ibanCode)
+          .withCardNumberIdentifiers(cardNumberIdentifiers)
+          .isAccountNumberAvailable(accountNumberAvailable)
+          .make();
 
     bankCollections.add(bankObj);
   }

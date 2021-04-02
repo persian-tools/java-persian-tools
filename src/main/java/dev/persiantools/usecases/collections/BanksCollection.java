@@ -7,47 +7,65 @@ import java.util.TreeMap;
 
 public class BanksCollection {
 
+  private static BanksCollection instance;
   private final List<Bank> bankCollections = new ArrayList<>();
   private final TreeMap<Integer, Bank> cardNumberMapping = new TreeMap<>();
 
-  public BanksCollection() {
-    addCentralBank();
-    addSanatOMadan();
-    addMellat();
-    addMelal();
-    addRefah();
-    addMaskan();
-    addSepah();
-    addKeshavarzi();
-    addMelli();
-    addTejarat();
-    addSaderat();
-    addTosee();
-    addTooaddaavon();
-    addToseeSaderat();
-    addPost();
-    addGhavamin();
-    addKarafarin();
-    addParsian();
-    addEghtesadNovin();
-    addSaman();
-    addPasargad();
-    addSina();
-    addSarmayeh();
-    addShahr();
-    addAyandeh();
-    addAnsar();
-    addGardeshgari();
-    addHekmatIranian();
-    addDey();
-    addIranZamin();
-    addIranVenezuela();
-    addMiddleEastBank();
-    addMehrEqtesad();
-    addNoorBank();
-    addResalat();
-    addKosar();
-    addMehrIran();
+  private BanksCollection() {
+
+  }
+
+  public static BanksCollection getInstance(){
+      if (instance == null){
+          synchronized (BanksCollection.class){
+              if (instance == null){
+                  instance = new BanksCollection();
+                  instance.addBanks();
+              }
+          }
+      }
+
+      return instance;
+  }
+
+  private void addBanks(){
+      addCentralBank();
+      addSanatOMadan();
+      addMellat();
+      addMelal();
+      addRefah();
+      addMaskan();
+      addSepah();
+      addKeshavarzi();
+      addMelli();
+      addTejarat();
+      addSaderat();
+      addTosee();
+      addTooaddaavon();
+      addToseeSaderat();
+      addPost();
+      addGhavamin();
+      addKarafarin();
+      addParsian();
+      addEghtesadNovin();
+      addSaman();
+      addPasargad();
+      addSina();
+      addSarmayeh();
+      addShahr();
+      addAyandeh();
+      addAnsar();
+      addGardeshgari();
+      addHekmatIranian();
+      addDey();
+      addIranZamin();
+      addIranVenezuela();
+      addMiddleEastBank();
+      addMehrEqtesad();
+      addNoorBank();
+      addResalat();
+      addKosar();
+      addMehrIran();
   }
 
   public List<Bank> getBanksCollection() {

@@ -14,7 +14,7 @@ public class BankUtils {
   private final TreeMap<Integer, Bank> cardIdentifiers;
 
   public BankUtils() {
-    BanksCollection banksData = new BanksCollection();
+    BanksCollection banksData = BanksCollection.getInstance();
     this.banksCollection = banksData.getBanksCollection();
     this.cardIdentifiers = banksData.getCardNumberMapping();
   }

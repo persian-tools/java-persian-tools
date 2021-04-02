@@ -2,13 +2,11 @@ package dev.persiantools.usecases.collections;
 
 import dev.persiantools.commons.Bank;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.TreeMap;
 
 public class BanksCollection {
 
   private static BanksCollection instance;
-  private final List<Bank> bankCollections = new ArrayList<>();
   private final TreeMap<Integer, Bank> cardNumberMapping = new TreeMap<>();
 
   private BanksCollection() {
@@ -68,10 +66,6 @@ public class BanksCollection {
       addMehrIran();
   }
 
-  public List<Bank> getBanksCollection() {
-    return bankCollections;
-  }
-
   public TreeMap<Integer, Bank> getCardNumberMapping() {
     return cardNumberMapping;
   }
@@ -98,7 +92,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSanatOMadan() {
@@ -123,7 +117,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMellat() {
@@ -149,7 +143,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addRefah() {
@@ -173,7 +167,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMaskan() {
@@ -197,7 +191,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSepah() {
@@ -221,7 +215,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addKeshavarzi() {
@@ -247,7 +241,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMelli() {
@@ -262,7 +256,7 @@ public class BanksCollection {
     String ibanCode = "017";
     boolean accountNumberAvailable = false;
 
-     Bank bankObj = new Bank
+    Bank bankObj = new Bank
           .Builder()
           .withNickName(nickname)
           .withName(name)
@@ -273,7 +267,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addTejarat() {
@@ -299,7 +293,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSaderat() {
@@ -324,7 +318,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addToseeSaderat() {
@@ -350,7 +344,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addPost() {
@@ -374,7 +368,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addTooaddaavon() {
@@ -397,7 +391,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addTosee() {
@@ -420,7 +414,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addGhavamin() {
@@ -445,7 +439,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addKarafarin() {
@@ -468,7 +462,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addParsian() {
@@ -492,7 +486,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addEghtesadNovin() {
@@ -515,7 +509,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSaman() {
@@ -538,7 +532,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addPasargad() {
@@ -562,7 +556,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSarmayeh() {
@@ -586,7 +580,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addSina() {
@@ -609,7 +603,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addShahr() {
@@ -633,7 +627,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addAyandeh() {
@@ -656,7 +650,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addAnsar() {
@@ -680,7 +674,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addGardeshgari() {
@@ -705,7 +699,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addHekmatIranian() {
@@ -729,7 +723,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addDey() {
@@ -753,7 +747,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addIranZamin() {
@@ -777,7 +771,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addResalat() {
@@ -801,7 +795,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addKosar() {
@@ -825,7 +819,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMelal() {
@@ -849,7 +843,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMiddleEastBank() {
@@ -873,7 +867,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   //TODO
@@ -896,7 +890,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
 
-    bankCollections.add(bankObj);
+
   }
 
   private void addMehrEqtesad() {
@@ -920,7 +914,7 @@ public class BanksCollection {
           .make();
 
     cardNumberIdentifiers.forEach(identifier -> cardNumberMapping.put(identifier, bankObj));
-    bankCollections.add(bankObj);
+
   }
 
   private void addMehrIran() {
@@ -942,7 +936,7 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
 
-    bankCollections.add(bankObj);
+
   }
 
   private void addIranVenezuela() {
@@ -965,6 +959,6 @@ public class BanksCollection {
           .isAccountNumberAvailable(accountNumberAvailable)
           .make();
 
-    bankCollections.add(bankObj);
+
   }
 }

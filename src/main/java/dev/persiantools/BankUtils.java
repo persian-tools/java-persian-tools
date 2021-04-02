@@ -4,14 +4,11 @@ import dev.persiantools.commons.Bank;
 import dev.persiantools.usecases.collections.BanksCollection;
 import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedCardNumber;
 import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedIban;
-import java.util.List;
 import java.util.Optional;
 import java.util.TreeMap;
 
 public class BankUtils {
-
-    private static final List<Bank> banksCollection = BanksCollection.getInstance().getBanksCollection();
-    private static final TreeMap<Integer, Bank> cardIdentifiers = BanksCollection.getInstance().getCardNumberMapping();
+  private static final TreeMap<Integer, Bank> cardIdentifiers = BanksCollection.getInstance().getCardNumberMapping();
 
   private BankUtils() {
 
@@ -28,7 +25,7 @@ public class BankUtils {
   }
 
   public static Bank findByIban(String ibanIdentifier) throws BankNotFoundByProvidedIban {
-    Optional<Bank> searchResult = banksCollection.stream().filter(bank -> bank.getIban().equals(ibanIdentifier)).findFirst();
+    Optional<Bank> searchResult = cardIdentifiers.values().stream().filter(bank -> bank.getIban().equals(ibanIdentifier)).findFirst();
 
     if (searchResult.isPresent()) {
       return searchResult.get();

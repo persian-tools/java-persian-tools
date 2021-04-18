@@ -1,5 +1,9 @@
 package dev.persiantools;
 
+import dev.persiantools.commons.*;
+import dev.persiantools.usecases.collections.*;
+
+import java.util.*;
 import java.util.regex.*;
 public class NationalId {
 
@@ -46,6 +50,26 @@ public class NationalId {
 
     public static String padLeftZeros(String inputString) {
         return ("00" + inputString).substring(inputString.length() + 2 - 10);
+    }
+
+    /**
+     * Get Province and City name by Iranian National-Id
+     * @param nationalId string of national id - like this: 1111111111
+     * @return An {@link Optional} of {@link Hometown} if nationalId is valid
+     * @throws IllegalArgumentException if nationalId is invalid
+     */
+    public static Optional<Hometown> getPlaceByIranNationalId(String nationalId) {
+
+        if (nationalId == null || nationalId.isBlank())
+            throw new IllegalArgumentException("Null or empty nationalId");
+
+        Pattern pattern = Pattern.compile("^\\d{10}$");
+        if (!pattern.matcher(nationalId).matches())
+            throw new IllegalArgumentException("Invalid nationalId");
+
+        String hometownCode = nationalId.substring(0, 3);
+        Hometown hometown = HometownCollection.getInstance().find(hometownCode);
+        return Optional.ofNullable(hometown);
     }
 
 }

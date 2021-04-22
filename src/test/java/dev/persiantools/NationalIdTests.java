@@ -83,25 +83,42 @@ public class NationalIdTests {
     }
 
     @Test
-    public void getPlaceByIranNationalId_InvalidNationalId_ReturnsEmptyOptional() {
+    public void getPlaceByIranNationalId_InvalidHometownCode_ReturnsEmptyList() {
         assert NationalId.getPlaceByIranNationalId("0008454594").isEmpty();
         assert NationalId.getPlaceByIranNationalId("8881234567").isEmpty();
     }
 
     @Test
-    public void getPlaceByIranNationalId_ValidNationalId_ReturnsHometownOptional() {
-        assert NationalId.getPlaceByIranNationalId("0499370899").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0790419904").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0084575948").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0060495219").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0671658506").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0671658506").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0643005846").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0906582709").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0451727304").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0371359058").isPresent();
-        assert NationalId.getPlaceByIranNationalId("5049478618").isPresent();
-        assert NationalId.getPlaceByIranNationalId("2110990147").isPresent();
-        assert NationalId.getPlaceByIranNationalId("0084545943").isPresent();
+    public void getPlaceByIranNationalId_ValidNationalId_ReturnsHometownsList() {
+        assert NationalId.getPlaceByIranNationalId("0499370899").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0790419904").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0084575948").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0060495219").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0671658506").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0671658506").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0643005846").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0906582709").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0451727304").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0371359058").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("5049478618").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("2110990147").size() != 0;
+        assert NationalId.getPlaceByIranNationalId("0084545943").size() != 0;
+    }
+
+    @Test
+    public void getPlaceByIranNationalId_SpecificHometownCode_ReturnsTwoItems() {
+        assert NationalId.getPlaceByIranNationalId("2530000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("2880000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3050000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3130000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3370000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3820000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3850000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3860000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("3950000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("4830000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("5930000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("6150000000").size() == 2;
+        assert NationalId.getPlaceByIranNationalId("6230000000").size() == 2;
     }
 }

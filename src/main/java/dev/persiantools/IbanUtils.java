@@ -4,16 +4,17 @@ import java.math.BigInteger;
 
 public class IbanUtils {
 
-  public static boolean isValid(String iban) {
-    String numericCountryCode = "1827";
-    String checkDigitsValue = iban.substring(2, 4);
+    public static boolean isValid(String iban) {
 
-    BigInteger standardModNumber = BigInteger.valueOf(97);
-    int countryCode = 2;
-    int checkDigits = 2;
+        String numericCountryCode = "1827";
+        String checkDigitsValue = iban.substring(2, 4);
 
-    String preparedIban = iban.substring(countryCode).substring(checkDigits).concat(numericCountryCode).concat(checkDigitsValue);
+        BigInteger standardModNumber = BigInteger.valueOf(97);
+        int countryCode = 2;
+        int checkDigits = 2;
 
-    return new BigInteger(preparedIban).mod(standardModNumber).intValue() == 1;
-  }
+        String preparedIban = iban.substring(countryCode).substring(checkDigits).concat(numericCountryCode).concat(checkDigitsValue);
+
+        return new BigInteger(preparedIban).mod(standardModNumber).intValue() == 1;
+    }
 }

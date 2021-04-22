@@ -11,59 +11,61 @@ public class Bank {
     private boolean accountNumberAvailable;
     private String iban;
 
-    private Bank(){}
+    private Bank() {
+    }
 
-  public static class Builder{
-      private String nickname;
-      private String name;
-      private String persianName;
-      private String ibanCode;
-      private List<Integer> cardNumberIdentifiers;
-      private boolean accountNumberAvailable;
+    public static class Builder {
 
-      public Builder withNickName(String nickname){
-          this.nickname = nickname;
-          return this;
-      }
+        private String nickname;
+        private String name;
+        private String persianName;
+        private String ibanCode;
+        private List<Integer> cardNumberIdentifiers;
+        private boolean accountNumberAvailable;
 
-      public Builder withName(String name){
-          this.name = name;
-          return this;
-      }
+        public Builder withNickName(String nickname) {
+            this.nickname = nickname;
+            return this;
+        }
 
-      public Builder withPersianName(String persianName){
-          this.persianName = persianName;
-          return this;
-      }
+        public Builder withName(String name) {
+            this.name = name;
+            return this;
+        }
 
-      public Builder withIbanCode(String iban){
-          this.ibanCode = iban;
-          return this;
-      }
+        public Builder withPersianName(String persianName) {
+            this.persianName = persianName;
+            return this;
+        }
 
-      public Builder withCardNumberIdentifiers(List<Integer> identifiers){
-          this.cardNumberIdentifiers = identifiers;
-          return this;
-      }
+        public Builder withIbanCode(String iban) {
+            this.ibanCode = iban;
+            return this;
+        }
 
-      public Builder isAccountNumberAvailable(boolean accountNumberAvailable){
-          this.accountNumberAvailable = accountNumberAvailable;
-          return this;
-      }
+        public Builder withCardNumberIdentifiers(List<Integer> identifiers) {
+            this.cardNumberIdentifiers = identifiers;
+            return this;
+        }
 
-      public Bank make(){
-          Bank bank = new Bank();
+        public Builder isAccountNumberAvailable(boolean accountNumberAvailable) {
+            this.accountNumberAvailable = accountNumberAvailable;
+            return this;
+        }
 
-          bank.nickName = this.nickname;
-          bank.name = this.name;
-          bank.iban = this.ibanCode;
-          bank.persianName = this.persianName;
-          bank.cardNumberIdentifiers = this.cardNumberIdentifiers;
-          bank.accountNumberAvailable = this.accountNumberAvailable;
+        public Bank make() {
 
-          return bank;
-      }
-  }
+            Bank bank = new Bank();
+            bank.nickName = this.nickname;
+            bank.name = this.name;
+            bank.iban = this.ibanCode;
+            bank.persianName = this.persianName;
+            bank.cardNumberIdentifiers = this.cardNumberIdentifiers;
+            bank.accountNumberAvailable = this.accountNumberAvailable;
+
+            return bank;
+        }
+    }
 
     public String getPersianName() {
         return persianName;
@@ -88,7 +90,4 @@ public class Bank {
     public String getIban() {
         return iban;
     }
-
-
-
 }

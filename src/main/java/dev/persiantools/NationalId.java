@@ -55,10 +55,10 @@ public class NationalId {
     /**
      * Get Province and City name by Iranian National-Id
      * @param nationalId string of national id - like this: 1111111111
-     * @return An {@link Optional} of {@link Hometown} if nationalId is valid
+     * @return A {@link List} of {@link Hometown} if nationalId is valid
      * @throws IllegalArgumentException if nationalId is invalid
      */
-    public static Optional<Hometown> getPlaceByIranNationalId(String nationalId) {
+    public static List<Hometown> getPlaceByIranNationalId(String nationalId) {
 
         if (nationalId == null || nationalId.isBlank())
             throw new IllegalArgumentException("Null or empty nationalId");
@@ -68,8 +68,7 @@ public class NationalId {
             throw new IllegalArgumentException("Invalid nationalId");
 
         String hometownCode = nationalId.substring(0, 3);
-        Hometown hometown = HometownCollection.getInstance().find(hometownCode);
-        return Optional.ofNullable(hometown);
+        return HometownCollection.getInstance().find(hometownCode);
     }
 
 }

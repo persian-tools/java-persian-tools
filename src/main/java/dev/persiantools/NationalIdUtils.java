@@ -5,7 +5,7 @@ import dev.persiantools.usecases.collections.*;
 
 import java.util.*;
 import java.util.regex.*;
-public class NationalId {
+public class NationalIdUtils {
 
     /**
      * Check National-id validation, 10-digit formatted as follows: XXX-XXXXXX-X

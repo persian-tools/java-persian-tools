@@ -13,30 +13,22 @@ import org.junit.Test;
 public class BankTest {
 
     @Test(expected = BankNotFoundByProvidedIban.class)
-    public void shouldReturnsBanksNameUsingIban() {
-        try {
-            for (Map.Entry<String, String> entry : getBanksDetailsByIban().entrySet()) {
-                String iban = entry.getKey();
-                String name = entry.getValue();
+    public void shouldReturnsBanksNameUsingIban() throws BankNotFoundByProvidedIban {
+        for (Map.Entry<String, String> entry : getBanksDetailsByIban().entrySet()) {
+            String iban = entry.getKey();
+            String name = entry.getValue();
 
-                assertEquals(BankUtils.findByIban(iban).getNickName(), name);
-            }
-        } catch (BankNotFoundByProvidedIban bankNotFoundByProvidedDigits) {
-            bankNotFoundByProvidedDigits.printStackTrace();
+            assertEquals(BankUtils.findByIban(iban).getNickName(), name);
         }
     }
 
     @Test(expected = BankNotFoundByProvidedCardNumber.class)
-    public void shouldReturnsBanksNameUsingCardNumber() {
-        try {
-            for (Map.Entry<Integer, String> entry : getBanksDetailsByCardNumber().entrySet()) {
-                Integer code = entry.getKey();
-                String name = entry.getValue();
+    public void shouldReturnsBanksNameUsingCardNumber() throws BankNotFoundByProvidedCardNumber {
+        for (Map.Entry<Integer, String> entry : getBanksDetailsByCardNumber().entrySet()) {
+            Integer code = entry.getKey();
+            String name = entry.getValue();
 
-                assertEquals(BankUtils.findByCardNumber(code).getNickName(), name);
-            }
-        } catch (BankNotFoundByProvidedCardNumber bankNotFoundByProvidedDigits) {
-            bankNotFoundByProvidedDigits.printStackTrace();
+            assertEquals(BankUtils.findByCardNumber(code).getNickName(), name);
         }
     }
 

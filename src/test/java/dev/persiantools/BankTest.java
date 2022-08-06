@@ -2,8 +2,9 @@ package dev.persiantools;
 
 import static org.junit.Assert.*;
 
-import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedCardNumber;
-import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedIban;
+import dev.persiantools.bank.BankUtils;
+import dev.persiantools.bank.exceptions.BankNotFoundByProvidedCardNumber;
+import dev.persiantools.bank.exceptions.BankNotFoundByProvidedIban;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package dev.persiantools.commons;
+package dev.persiantools.bank;
 
 import java.util.List;
 

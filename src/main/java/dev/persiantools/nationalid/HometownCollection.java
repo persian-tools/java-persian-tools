@@ -1,6 +1,4 @@
-package dev.persiantools.usecases.collections;
-
-import dev.persiantools.commons.*;
+package dev.persiantools.nationalid;
 
 import java.util.*;
 import java.util.stream.Collectors;

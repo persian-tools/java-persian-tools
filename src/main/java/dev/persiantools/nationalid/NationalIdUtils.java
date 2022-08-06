@@ -1,7 +1,4 @@
-package dev.persiantools;
-
-import dev.persiantools.commons.*;
-import dev.persiantools.usecases.collections.*;
+package dev.persiantools.nationalid;
 
 import java.util.*;
 import java.util.regex.*;

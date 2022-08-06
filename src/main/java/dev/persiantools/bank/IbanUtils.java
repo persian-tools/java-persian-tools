@@ -1,4 +1,4 @@
-package dev.persiantools;
+package dev.persiantools.bank;
 
 import java.math.BigInteger;
 

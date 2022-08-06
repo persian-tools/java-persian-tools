@@ -1,9 +1,7 @@
-package dev.persiantools;
+package dev.persiantools.bank;
 
-import dev.persiantools.commons.Bank;
-import dev.persiantools.usecases.collections.BanksCollection;
-import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedCardNumber;
-import dev.persiantools.usecases.exceptions.BankNotFoundByProvidedIban;
+import dev.persiantools.bank.exceptions.BankNotFoundByProvidedCardNumber;
+import dev.persiantools.bank.exceptions.BankNotFoundByProvidedIban;
 
 import java.util.Optional;
 import java.util.TreeMap;

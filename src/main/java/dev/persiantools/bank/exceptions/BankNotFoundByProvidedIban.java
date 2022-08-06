@@ -1,4 +1,4 @@
-package dev.persiantools.usecases.exceptions;
+package dev.persiantools.bank.exceptions;
 
 public class BankNotFoundByProvidedIban extends Exception {
 

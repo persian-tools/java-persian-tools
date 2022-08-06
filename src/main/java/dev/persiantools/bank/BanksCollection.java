@@ -1,6 +1,4 @@
-package dev.persiantools.usecases.collections;
-
-import dev.persiantools.commons.Bank;
+package dev.persiantools.bank;
 
 import java.util.ArrayList;
 import java.util.TreeMap;

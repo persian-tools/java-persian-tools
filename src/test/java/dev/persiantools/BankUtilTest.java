@@ -11,7 +11,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-public class BankTest {
+public class BankUtilTest {
 
     @Test(expected = BankNotFoundByProvidedIban.class)
     public void shouldReturnsBanksNameUsingIban() throws BankNotFoundByProvidedIban {
@@ -128,5 +128,37 @@ public class BankTest {
         mapping.put(628157, "tosee");
 
         return mapping;
+    }
+
+    @Test
+    public void shouldReturnTrueForTruthyIban() {
+
+        HashMap<String, Boolean> truthyIbans = new HashMap<>();
+        truthyIbans.put("IR820540102680020817909002", true);
+        truthyIbans.put("IR062960000000100324200001", true);
+        truthyIbans.put("IR580540105180021273113007", true);
+
+        for (Map.Entry<String, Boolean> entry : truthyIbans.entrySet()) {
+            String iban = entry.getKey();
+            Boolean assertion = entry.getValue();
+
+            assertEquals((BankUtils.isValidIban(iban)), assertion);
+        }
+    }
+
+    @Test
+    public void shouldReturnFalsyForFalsyIban() {
+
+        HashMap<String, Boolean> falsyIbans = new HashMap<>();
+        falsyIbans.put("IR012345678901234567890123", false);
+        falsyIbans.put("IR01234567890123456789", false);
+        falsyIbans.put("IR012345678901234567890123456789", false);
+
+        for (Map.Entry<String, Boolean> entry : falsyIbans.entrySet()) {
+            String iban = entry.getKey();
+            Boolean assertion = entry.getValue();
+
+            assertEquals((BankUtils.isValidIban(iban)), assertion);
+        }
     }
 }

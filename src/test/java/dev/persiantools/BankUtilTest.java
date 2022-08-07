@@ -131,6 +131,19 @@ public class BankUtilTest {
     }
 
     @Test
+    public void validateCardNumber_withValidInput_returnsTrue() {
+        assertTrue(BankUtils.isValidCardNumber("6037701689095443"));
+        assertTrue(BankUtils.isValidCardNumber("6219861034529007"));
+    }
+
+    @Test
+    public void validateCardNumber_withInvalidInput_returnsFalse() {
+        assertFalse(BankUtils.isValidCardNumber("6219861034529008"));
+        assertFalse(BankUtils.isValidCardNumber("621986103452900"));
+        assertFalse(BankUtils.isValidCardNumber("0000000000000000"));
+    }
+
+    @Test
     public void shouldReturnTrueForTruthyIban() {
 
         HashMap<String, Boolean> truthyIbans = new HashMap<>();

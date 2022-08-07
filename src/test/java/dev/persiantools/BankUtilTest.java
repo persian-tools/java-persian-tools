@@ -2,6 +2,7 @@ package dev.persiantools;
 
 import static org.junit.Assert.*;
 
+import dev.persiantools.bank.Bank;
 import dev.persiantools.bank.BankUtils;
 import dev.persiantools.bank.exceptions.BankNotFoundByProvidedCardNumber;
 import dev.persiantools.bank.exceptions.BankNotFoundByProvidedIban;
@@ -13,14 +14,24 @@ import org.junit.Test;
 
 public class BankUtilTest {
 
-    @Test(expected = BankNotFoundByProvidedIban.class)
-    public void shouldReturnsBanksNameUsingIban() throws BankNotFoundByProvidedIban {
-        for (Map.Entry<String, String> entry : getBanksDetailsByIban().entrySet()) {
-            String iban = entry.getKey();
-            String name = entry.getValue();
+    @Test
+    public void findByIban_withCorrectIban_returnsBandInfo() throws BankNotFoundByProvidedIban {
+        Bank parsianBank = BankUtils.findByIban("IR820540102680020817909002");
+        Bank pasargadBank = BankUtils.findByIban("IR550570022080013447370101");
+        assertEquals(parsianBank.getNickName(), "parsian");
+        assertEquals(pasargadBank.getNickName(), "pasargad");
+    }
 
-            assertEquals(BankUtils.findByIban(iban).getNickName(), name);
-        }
+    @Test(expected = BankNotFoundByProvidedIban.class)
+    public void findByIban_withInvalidIban_throwsException() throws BankNotFoundByProvidedIban {
+        BankUtils.findByIban("IR820540102680020817909001");
+        fail();
+    }
+
+    @Test(expected = BankNotFoundByProvidedIban.class)
+    public void findByIban_withInvalidIbanCode_throwsException() throws BankNotFoundByProvidedIban {
+        BankUtils.findByIban("IR980600102680020817909000");
+        fail();
     }
 
     @Test(expected = BankNotFoundByProvidedCardNumber.class)
@@ -33,51 +44,8 @@ public class BankUtilTest {
         }
     }
 
-    private HashMap<String, String> getBanksDetailsByIban() {
-        HashMap<String, String> mapping = new HashMap<>();
 
-        mapping.put("010", "central-bank");
-        mapping.put("011", "sanat-o-madan");
-        mapping.put("012", "mellat");
-        mapping.put("013", "refah");
-        mapping.put("014", "maskan");
-        mapping.put("015", "sepah");
-        mapping.put("016", "keshavarzi");
-        mapping.put("017", "melli");
-        mapping.put("018", "tejarat");
-        mapping.put("019", "saderat");
-        mapping.put("020", "tosee-saderat");
-        mapping.put("021", "post");
-        mapping.put("022", "toose-taavon");
-        mapping.put("051", "tosee");
-        mapping.put("052", "ghavamin");
-        mapping.put("053", "karafarin");
-        mapping.put("054", "parsian");
-        mapping.put("055", "eghtesad-novin");
-        mapping.put("056", "saman");
-        mapping.put("057", "pasargad");
-        mapping.put("058", "sarmayeh");
-        mapping.put("059", "sina");
-        mapping.put("060", "mehr-iran");
-        mapping.put("061", "shahr");
-        mapping.put("062", "ayandeh");
-        mapping.put("063", "ansar");
-        mapping.put("064", "gardeshgari");
-        mapping.put("065", "hekmat-iranian");
-        mapping.put("066", "dey");
-        mapping.put("069", "iran-zamin");
-        mapping.put("070", "resalat");
-        mapping.put("073", "kosar");
-        mapping.put("075", "melal");
-        mapping.put("078", "middle-east-bank");
-        mapping.put("080", "noor-bank");
-        mapping.put("079", "mehr-eqtesad");
-        mapping.put("090", "mehr-iran");
-        mapping.put("095", "iran-venezuela");
-
-        return mapping;
-    }
-
+    @SuppressWarnings("SpellCheckingInspection")
     private HashMap<Integer, String> getBanksDetailsByCardNumber() {
         HashMap<Integer, String> mapping = new HashMap<>();
 
@@ -144,7 +112,7 @@ public class BankUtilTest {
     }
 
     @Test
-    public void shouldReturnTrueForTruthyIban() {
+    public void isValidIban_withValidInputs_returnsTrue() {
 
         HashMap<String, Boolean> truthyIbans = new HashMap<>();
         truthyIbans.put("IR820540102680020817909002", true);
@@ -160,7 +128,7 @@ public class BankUtilTest {
     }
 
     @Test
-    public void shouldReturnFalsyForFalsyIban() {
+    public void isValidIban_withInvalidInputs_returnsFalse() {
 
         HashMap<String, Boolean> falsyIbans = new HashMap<>();
         falsyIbans.put("IR012345678901234567890123", false);

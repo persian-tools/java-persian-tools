@@ -11,12 +11,19 @@ public class BankUtils {
 
     private final static Pattern IBAN_PATTERN = Pattern.compile("IR[0-9]{2}([0-9]{3})[0-9]{19}");
 
-    public static Bank findByCardNumber(Integer cardNumber) throws BankNotFoundByProvidedCardNumber {
+    public static Bank findByCardNumber(String cardNumber) throws BankNotFoundByProvidedCardNumber {
+
+        if (!isValidCardNumber(cardNumber)) {
+            throw new BankNotFoundByProvidedCardNumber(cardNumber);
+        }
+
+        int cardNumberIdentifier = Integer.parseInt(cardNumber.substring(0, 6));
 
         Bank searchResult = BanksCollection
                 .getInstance()
                 .getCardNumberMapping()
-                .get(cardNumber);
+                .get(cardNumberIdentifier);
+
         if (searchResult == null) {
             throw new BankNotFoundByProvidedCardNumber(cardNumber);
         }
@@ -35,6 +42,7 @@ public class BankUtils {
      *     <li>sum up every new digit</li>
      *     <li>if the result is divisible by 10 then the result is valid</li>
      * </ul>
+     *
      * @param cardNumber 16 digit of card number in string format without any separator
      */
     public static boolean isValidCardNumber(String cardNumber) {
@@ -58,8 +66,9 @@ public class BankUtils {
 
     public static Bank findByIban(String iban) throws BankNotFoundByProvidedIban {
 
-        if(!isValidIban(iban))
+        if (!isValidIban(iban)) {
             throw new BankNotFoundByProvidedIban(iban);
+        }
 
         Matcher matcher = IBAN_PATTERN.matcher(iban);
         if (!matcher.matches())

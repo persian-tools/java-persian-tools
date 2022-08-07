@@ -15,7 +15,7 @@ import org.junit.Test;
 public class BankUtilTest {
 
     @Test
-    public void findByIban_withCorrectIban_returnsBandInfo() throws BankNotFoundByProvidedIban {
+    public void findByIban_withCorrectIban_returnsBankInfo() throws BankNotFoundByProvidedIban {
         Bank parsianBank = BankUtils.findByIban("IR820540102680020817909002");
         Bank pasargadBank = BankUtils.findByIban("IR550570022080013447370101");
         assertEquals(parsianBank.getNickName(), "parsian");
@@ -34,68 +34,22 @@ public class BankUtilTest {
         fail();
     }
 
-    @Test(expected = BankNotFoundByProvidedCardNumber.class)
-    public void shouldReturnsBanksNameUsingCardNumber() throws BankNotFoundByProvidedCardNumber {
-        for (Map.Entry<Integer, String> entry : getBanksDetailsByCardNumber().entrySet()) {
-            Integer code = entry.getKey();
-            String name = entry.getValue();
-
-            assertEquals(BankUtils.findByCardNumber(code).getNickName(), name);
-        }
+    @Test
+    public void findByCardNumber_withCorrectCardNumber_returnsBankInfo() throws BankNotFoundByProvidedCardNumber {
+        assertEquals(BankUtils.findByCardNumber("6037701689095443").getNickName(), "keshavarzi");
+        assertEquals(BankUtils.findByCardNumber("6219861034529007").getNickName(), "saman");
     }
 
+    @Test(expected = BankNotFoundByProvidedCardNumber.class)
+    public void findByCardNumber_withInvalidCardNumber_throwsException() throws BankNotFoundByProvidedCardNumber {
+        BankUtils.findByCardNumber("621986103452900");
+        fail();
+    }
 
-    @SuppressWarnings("SpellCheckingInspection")
-    private HashMap<Integer, String> getBanksDetailsByCardNumber() {
-        HashMap<Integer, String> mapping = new HashMap<>();
-
-        mapping.put(636214, "ayandeh");
-        mapping.put(627412, "eghtesad-novin");
-        mapping.put(627381, "ansar");
-        mapping.put(505785, "iran-zamin");
-        mapping.put(622106, "parsian");
-        mapping.put(627884, "parsian");
-        mapping.put(502229, "pasargad");
-        mapping.put(639347, "pasargad");
-        mapping.put(627760, "post");
-        mapping.put(585983, "tejarat");
-        mapping.put(627353, "tejarat");
-        mapping.put(502908, "toose-taavon");
-        mapping.put(207177, "tosee-saderat");
-        mapping.put(627648, "tosee-saderat");
-        mapping.put(636949, "hekmat-iranian");
-        mapping.put(585949, "middle-east-bankه");
-        mapping.put(502938, "dey");
-        mapping.put(504172, "resalat");
-        mapping.put(589463, "refah");
-        mapping.put(621986, "saman");
-        mapping.put(589210, "sepah");
-        mapping.put(639607, "sarmayeh");
-        mapping.put(639346, "sina");
-        mapping.put(502806, "shahr");
-        mapping.put(504706, "shahr");
-        mapping.put(603769, "saderat");
-        mapping.put(903769, "saderat");
-        mapping.put(627961, "sanat-o-madan");
-        mapping.put(639370, "بانک قرض الحسنه مهر");
-        mapping.put(639599, "ghavamin");
-        mapping.put(627488, "karafarin");
-        mapping.put(603770, "keshavarzi");
-        mapping.put(639217, "keshavarzi");
-        mapping.put(505416, "gardeshgari");
-        mapping.put(505426, "gardeshgari");
-        mapping.put(636797, "central-bank");
-        mapping.put(628023, "maskan");
-        mapping.put(610433, "mellat");
-        mapping.put(991975, "mellat");
-        mapping.put(170019, "melli");
-        mapping.put(603799, "melli");
-        mapping.put(606373, "mehr-iran");
-        mapping.put(505801, "kosar");
-        mapping.put(606256, "melal");
-        mapping.put(628157, "tosee");
-
-        return mapping;
+    @Test(expected = BankNotFoundByProvidedCardNumber.class)
+    public void findByCardNumber_withInvalidCardNumberCode_throwsException() throws BankNotFoundByProvidedCardNumber {
+        BankUtils.findByCardNumber("9999991034529002");
+        fail();
     }
 
     @Test

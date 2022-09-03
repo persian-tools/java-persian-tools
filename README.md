@@ -94,3 +94,7 @@ List<Hometown> hometowns = NationalIdUtils.getPlaceByIranNationalId(null); //thr
 ## Contributing
 
 Thank you for your interest in contributing to Java Persian Tools. Contributions are welcome and please feel free to put up a PR for any issue or feature request.
+
+## License
+
+`java-persian-tools` is available under the [MIT license](LICENSE).

@@ -20,7 +20,7 @@
     - [x] [Find birthplace by national id](#find-birthplace-by-national-id)
 - Text Utils
     - [ ] Convert Persian words to the number
-    - [ ] Convert Numbers to Persian words
+    - [x] [Convert Numbers to Persian words](#convert-numbers-to-persian-words)
     - [ ] Fix Persian characters in URL
     - [ ] Fix Persian zero-width non-joiner (Replace spaces by half-space)
     - [ ] Validate the correctness of the text of the Persian language and clear the Arabic letters in the Persian text
@@ -90,6 +90,18 @@ List<Hometown> hometowns = NationalIdUtils.getPlaceByIranNationalId("2530000000"
 List<Hometown> hometowns = NationalIdUtils.getPlaceByIranNationalId("0008454594"); // []
 List<Hometown> hometowns = NationalIdUtils.getPlaceByIranNationalId(null); //throws IllegalArgumentException
 ```
+### Convert Numbers to Persian words  
+```java
+String result = NumberUtils.numberToWords(4); //چهار
+String result = NumberUtils.numberToWords(0); //صفر
+String result = NumberUtils.numberToWords(30000000000L); //سی میلیارد
+String result = NumberUtils.numberToWords(500443); //پانصد هزار و چهار صد و چهل و سه
+
+// with ordinal = true
+String result = NumberUtils.numberToWords(-30, true); //منفی سی اُم
+String result = NumberUtils.numberToWords(-123, true); //منفی صد و بیست و سوم
+```
+
 
 ## Contributing
 
